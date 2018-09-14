@@ -1,0 +1,26 @@
+<?php
+return [
+    'E-Mail Address' => 'tài khoản email',
+    'Product' =>'Sản phẩm',
+    'Permission' =>'Quyền',
+	'Role' =>'Chức vụ',
+	'User' =>'Người dùng',
+	'Country' =>'Quốc gia',
+	'Content' =>'Bài viết',
+	'category' =>'Danh mục',
+	'Dashboard' => 'Bảng điều khiển',
+	'serial'=>'Thứ tự',
+	'Category'=>'chuyên mục',
+	'Title'=>'Tiêu đề',
+	'Author'=>'tên tác giả',
+	'Post-time'=>'thời gian đăng bài',
+	'Status'=>'trạng thái',
+	'task'=>'Chức năng',
+	'permission name'=>'tên quyền',
+	'url'=>'đường dẫn',
+	'role name'=>'Chức vụ',
+	'Name' => 'Tên',
+	'Email' => 'Địa chỉ Email',
+	'Country' => 'Quốc gia',
+
+];
