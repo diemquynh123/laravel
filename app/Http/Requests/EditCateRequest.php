@@ -32,8 +32,6 @@ class EditCateRequest extends FormRequest
     public function messages(){
         return[
             'name.unique'=>'tên danh mục đã bị trùng',
-
-         
         ];
     }
 }

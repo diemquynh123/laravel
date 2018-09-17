@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Post;

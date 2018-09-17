@@ -46,25 +46,18 @@ class SocialAuthController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = User::where('email', $user->email)->first();
         if ($authUser) {
             return $authUser;
         }
         return User::create([
             'name'     => $user->name,
             'email'    => $user->email,
+            'password' =>bcrypt('123456'),
             'provider' => $provider,
-            'provider_id' => $user->id
+            'provider_id' => $user->id,
+            'country_id' =>1
         ]);
     }
 
-
-//     $client = new GuzzleHttp\Client();
-
-// $request = $client-> createRequest('GET', 'cloud.feedly.com/v3/streams/contents?streamId=user/user-id/category/global.all&count=1');
-
-// $request->setHeader('Authorization', "auth-code");
-
-// // Send.
-// $response = $client->send($request);
 }

@@ -36,8 +36,8 @@ return [
     ],
 
      'google' => [
-        'client_id' => '197507226449-jbku0lo212qqolmn255hkr1htr1gs127.apps.googleusercontent.com',
-        'client_secret' => 'DZPToxeuTMol7BPq5JO0LVb_',
+        'client_id' => '197507226449-06i47spj8vbdtr9n90h9llo28e57so8i.apps.googleusercontent.com',
+        'client_secret' => 'B8CypZs-KiQNvu7KFtUBHD81',
         'redirect' => 'http://all-laravel.com/auth/google/callback',
     ],
 
