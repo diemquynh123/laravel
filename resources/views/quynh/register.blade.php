@@ -1,10 +1,11 @@
-#avatar{
-    cursor: pointer;
-}
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body {
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
 }
 
 * {
@@ -13,7 +14,9 @@ body {
 
 /* Add padding to containers */
 .container {
+    width: 500px;
     padding: 16px;
+    margin:0 auto;
     background-color: white;
 }
 
@@ -64,3 +67,26 @@ a {
     background-color: #f1f1f1;
     text-align: center;
 }
+</style>
+</head>
+<body>
+
+<form method="post" action="{{route('postRegister')}}">
+  <div class="container">
+    <h1>Register</h1>
+
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  {{csrf_field()}}
+</form>
+
+</body>
+</html>

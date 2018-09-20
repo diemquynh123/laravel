@@ -14,7 +14,7 @@ use App\Models\Category;
 use App\Models\Country;
 use App\Models\Post;
 use Illuminate\Support\Facades\Gate;
-
+use App\Models\Article;
 class AdminController extends Controller
 {
 
@@ -72,11 +72,10 @@ class AdminController extends Controller
             	$product->post_time = $request->date;
             	$product->save();
                DB::commit();
-                $success = true;
+                // $success = true;
                 return redirect()->route('product');
             }
         catch (\Exception $e) {
-            dd($e->getMessage());
             return redirect()->back()
                 ->withErrors($e->getMessage());
         }
@@ -143,6 +142,12 @@ class AdminController extends Controller
     public function deletecate($id){
         DB::table('categories')->where('id', $id)->delete();
         return redirect()->route('category');
+    }
+
+
+    public function getarticle(){
+        $article = Article::paginate(5);
+        return view('admin.articles', compact('article'));
     }
 
 }

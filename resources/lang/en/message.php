@@ -23,4 +23,5 @@ return [
 	'Email'=> 'Email',
 	'Country'=> 'Country',
 	'Role'=> 'Role',
+	'Article' => 'Article',
 ];

@@ -367,6 +367,7 @@
              @if(Gate::allows('category',Auth::user()))
              <li><a href="{{route('category')}}"><i class="fa fa-circle-o"></i>{{trans('message.category')}}</a></li>
              @endif
+               <li><a href="{{route('article')}}"><i class="fa fa-circle-o"></i>{{trans('message. Article')}}</a></li>
           </ul>
         </li>
         <li class="treeview">

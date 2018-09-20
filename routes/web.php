@@ -77,9 +77,12 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::get('/deletecate','AdminController@deletecate')->name('deletecate')->middleware('can:deletecate');
 
 
+	Route::get('/article','AdminController@getarticle')->name('article');
+	 Route::post('/article','AdminController@loadDataAjax')->name('loadDataAjax');
 });
-
-Route::group(['namespace'=>'restful','prefix'=>'restful'], function(){
-	Route::resource('hocsinh','HocSinhController');
-});
- 
+	Route::group(['namespace'=>'quynh','prefix'=>'quynh'],function(){
+		Route::get('/','LoginController@getLogin')->name('login');
+		Route::post('/','LoginController@postLogin')->name('postLogin');
+		Route::get('/register','LoginController@getRegister')->name('register');
+		Route::post('/register','LoginController@postRegister')->name('postRegister');
+	});

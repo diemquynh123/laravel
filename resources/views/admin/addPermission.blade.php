@@ -2,7 +2,7 @@
  @section('main')
 
         <div class="panel panel-default">
-            <div class="panel-heading">Add Permissionc</div>
+            <div class="panel-heading">Add Permission</div>
             <div class="panel-body">
                 <div class="col-md-12">
                     <form role="form" method="post">

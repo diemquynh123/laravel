@@ -22,8 +22,16 @@
           <td>{{$item->id}}</td>
           <td>{{$item->name}}</td>
           <td>
-            <a href="{{route('editcate',$item->id)}}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> </a> 
+            @if(Gate::allows('editcate',Auth::user()))
+              <a href="{{route('editcate',$item->id)}}" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a> 
+            @else
+              <a class="btn btn-info" disabled> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            @endif
+            @if(Gate::allows('editcate',Auth::user()))
             <a href="{{route('deletecate',$item->id)}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+            @else
+             <a class="btn btn-info" disabled> xóa</a>
+            @endif
           </td>
         </tr> 
         @endforeach                 

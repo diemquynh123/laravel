@@ -32,7 +32,7 @@ class EditUserRequest extends FormRequest
 
     public function messages(){
         return[
-            'name.unique'=>'tên đã bị trùng',  
+            'name.unique'=>'tên người dùng đã bị trùng',  
             'email.unique'=>'email đã bị trùng',     
         ];
     }

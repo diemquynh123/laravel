@@ -55,7 +55,7 @@
                   @if(Gate::allows('editproduct',Auth::user()))
                   <a href="{{route('editproduct',$item->id)}}" class="btn btn-info"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                   @else
-                  <a class="btn btn-info" disabled> sửa</a>
+                  <a class="btn btn-info" disabled> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                   @endif
                   <a href="{{route('deleteprod',$item->id)}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
                 </td>

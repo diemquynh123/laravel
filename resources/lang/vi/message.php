@@ -22,5 +22,6 @@ return [
 	'Name' => 'Tên',
 	'Email' => 'Địa chỉ Email',
 	'Country' => 'Quốc gia',
+	'Article' => 'bài báo',
 
 ];
