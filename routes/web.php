@@ -33,6 +33,7 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::get('/list','javasController@getList');
 	Route::get('/canvas/{id}','javasController@getCanvas')->name('get.canvas');
 	Route::post('/canvas','javasController@postCanvas')->name('post.canvas');
+	Route::get('/deletecanvas/{id}','javasController@deleteCanvas')->name('deleteCanvas');
 
 	Route::get('/permission','AclController@getPermission')->name('permission_list')->middleware('can:permission_list');
 	Route::get('/addPermission','AclController@getAddPermission')->name('addpermission')->middleware('can:addpermission');

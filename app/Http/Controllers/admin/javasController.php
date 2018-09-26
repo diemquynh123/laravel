@@ -16,7 +16,9 @@ class javasController extends Controller
     public function getCanvas($id)
     {
 		$data['images'] = Image::find($id);
-		$data['data'] = Point::where('img_id' , $id)->get();
+		$result = Point::where('img_id' , $id)->get();
+		$data["img_id"] = $id;
+		$data['data'] = $result;
 
         return view('javas.canvas', $data);
     }
@@ -34,6 +36,12 @@ class javasController extends Controller
 	    	$point->img_id = $imgId;
 	    	$point->save();
 		}
+    }
+
+    public function deleteCanvas($id) 
+    {
+    	$data = Point::where('img_id', $id)->delete();
+    	return redirect()->route('get.canvas',$id);
     }
 
 

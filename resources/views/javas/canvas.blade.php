@@ -10,13 +10,14 @@
 </style>
 </head>
 <body>
+
 	<form method="post" action="{{route('post.canvas')}}">
-	<img src="{{asset('images/3.png')}}" id="flow">
-	<p id="demo"></p>
-	<canvas id= "avt" width="1350px" height="800px"></canvas>
-	<input type="submit" name="sbm" value="save">
-	{{csrf_field()}}
-</form>
+		<img src="{{asset('images/3.png')}}" id="flow">
+		<p id="demo"></p>
+		<canvas id= "avt" width="1350px" height="800px"></canvas>
+		<a href="{{route('deleteCanvas',$img_id)}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Xóa</a>
+		{{csrf_field()}}
+	</form>
 	<script>
 		var url = "{{ route('post.canvas') }} ";
 		var token = "{{ csrf_token() }}";
