@@ -1,5 +1,6 @@
 <?php
 return [
+	'Home'=>'Trang chủ',
     'E-Mail Address' => 'tài khoản email',
     'Product' =>'Sản phẩm',
     'Permission' =>'Quyền',

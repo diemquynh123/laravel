@@ -99,7 +99,6 @@ class AclController extends Controller
         public function postAddRole(AddRoleRequest $request){
             $this->authorize('postaddrole');
         	$role = new Roles();
-        	
         	$role->title = $request->name;
         	$role->save();  
 

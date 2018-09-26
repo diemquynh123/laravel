@@ -52,7 +52,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Home</b></span>
+      <span class="logo-lg"><b>{{trans('message.Home')}}</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -367,7 +367,7 @@
              @if(Gate::allows('category',Auth::user()))
              <li><a href="{{route('category')}}"><i class="fa fa-circle-o"></i>{{trans('message.category')}}</a></li>
              @endif
-               <li><a href="{{route('article')}}"><i class="fa fa-circle-o"></i>{{trans('message. Article')}}</a></li>
+               <li><a href="{{route('article')}}"><i class="fa fa-circle-o"></i>{{trans('message.Article')}}</a></li>
           </ul>
         </li>
         <li class="treeview">

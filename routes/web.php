@@ -24,9 +24,15 @@ Route::group(['middleware' => 'locale'], function() {
         ->name('user.change-language');
 });
 
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::get('/','AdminController@getHome')->name('admin')->middleware('checklogin','auth');
+
+	Route::get('/list','javasController@getList');
+	Route::get('/canvas/{id}','javasController@getCanvas')->name('get.canvas');
+	Route::post('/canvas','javasController@postCanvas')->name('post.canvas');
 
 	Route::get('/permission','AclController@getPermission')->name('permission_list')->middleware('can:permission_list');
 	Route::get('/addPermission','AclController@getAddPermission')->name('addpermission')->middleware('can:addpermission');

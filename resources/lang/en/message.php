@@ -1,5 +1,6 @@
 <?php
 return [
+	'Home'=>'Home',
     'E-Mail Address' => 'E-Mail Address',
     'Product' =>'Product',
     'Permission' =>'Permission',

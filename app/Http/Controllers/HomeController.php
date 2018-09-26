@@ -32,4 +32,6 @@ class HomeController extends Controller
         Session::put('website_language', $language);
         return redirect()->back();
     }
+
+ 
 }
